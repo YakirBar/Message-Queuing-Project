@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  rabbitmq:
+    container_name: rabbitMQ
+    image: rabbitmq:3-management
+    networks:
+      - queuing
+
+networks:
+  queuing:
+    driver: bridge
